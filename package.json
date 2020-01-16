@@ -1,17 +1,29 @@
 {
   "name": "chiya",
   "version": "1.0.0",
-  "description": "",
+  "description": "Just another gochiusa bot",
   "main": "index.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
   },
   "author": "DanielaGC_",
-  "license": "MIT",
+  "license": "AGPL-3.0",
   "devDependencies": {
     "dotenv": "^8.2.0"
   },
   "dependencies": {
     "discord.js": "github:discordjs/discord.js#master"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielaGC/Chiya-Ujimatsu.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DanielaGC/Chiya-Ujimatsu/issues"
+  },
+  "homepage": "https://github.com/DanielaGC/Chiya-Ujimatsu#readme"
 }
