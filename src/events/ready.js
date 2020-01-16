@@ -4,6 +4,14 @@ module.exports = class ReadyReceive {
     }
 
     run() {
+
+        this.client.user.setPresence({
+            activity: {
+                name: "Your suggestions",
+                type: "LISTENING"
+            },
+            status: "dnd"
+        })
         console.log("Connected to Discord")
     }
 }
