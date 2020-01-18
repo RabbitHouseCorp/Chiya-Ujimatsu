@@ -8,15 +8,16 @@ module.exports = class MessageReceive {
 
         if (message.author.bot) return
         if (message.channel.type === "dm") return
-        if (message.channel.id === "") {
+        if (message.channel.id === "468880249023889408") {
             let embed = new MessageEmbed()
             .setColor(message.member.displayHexColor)
-            .setFooter("Suggestion submitted")
+            .setFooter("Suggestion submitted", message.guild.iconURL())
             .setAuthor("Suggestion", message.member.user.displayAvatarURL())
             .setDescription(message.member.lastMessage.content)
+            .setTimestamp(new Date())
 
-            message.channel.createWebhook(message.member.user.username, {
-                avatar: message.member.user.displayAvatarURL()
+            message.channel.createWebhook(message.author.username, {
+                avatar: message.author.displayAvatarURL()
             })
             .then(webhook => {
                 webhook.send(embed)
