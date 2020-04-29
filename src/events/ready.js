@@ -4,14 +4,16 @@ module.exports = class ReadyReceive {
     }
 
     run() {
-
-        this.client.user.setPresence({
-            activity: {
-                name: "Your suggestions",
-                type: "LISTENING"
-            },
-            status: "dnd"
-        })
+    	
+    setInterval(() => {
+	        this.client.user.setPresence({
+	            activity: {
+	                name: "Your suggestions",
+	                type: "LISTENING"
+	            },
+	            status: "dnd"
+	        }, 10000)
+        }
         console.log("Connected to Discord")
     }
 }
