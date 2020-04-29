@@ -12,8 +12,8 @@ module.exports = class ReadyReceive {
 	                type: "LISTENING"
 	            },
 	            status: "dnd"
-	        }, 10000)
-        }
+	        })
+        }, 10000)
         console.log("Connected to Discord")
     }
 }
