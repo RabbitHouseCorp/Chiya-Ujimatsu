@@ -4,8 +4,6 @@ module.exports = class ReadyReceive {
 	 }
 	
 	run() {
-		const http = require("http")
-	    setInterval(() => http.get("http://cocoa-hoto.glitch.me"), 300000)
 	    setInterval(() => {
 		        this.client.user.setPresence({
 		            activity: {
