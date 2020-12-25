@@ -1,15 +1,15 @@
-const Command = require("../../structures/commands")
+const { Command } = require('../../utils')
 module.exports = class PingCommand extends Command {
-    constructor(client) {
-        super(client, {
-            name: "ping",
+    constructor() {
+        super({
+            name: 'ping',
             aliases: [],
-            category: "misc"
+            category: 'misc'
         })
     }
 
-    async run(message, args) {
-        let msg = await message.channel.send("🏓 ping?")
-        msg.edit(`🏓 Websocket ping: \`${Math.round(this.client.ws.ping)}\`ms! | Latency API: \`${msg.createdAt - message.createdAt}\`ms!`)
+    async run(ctx) {
+        let msg = await ctx.message.channel.send('🏓 ping?')
+        msg.edit(`🏓 Websocket ping: \`${Math.round(ctx.client.ws.ping)}\`ms! | Latency API: \`${msg.createdAt - ctx.message.createdAt}\`ms!`)
     }
 }
