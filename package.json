@@ -16,7 +16,7 @@
     "dotenv": "^16.0.0"
   },
   "dependencies": {
-    "chalk": "^4.1.0",
+    "chalk": "^5.0.1",
     "discord.js": "github:discordjs/discord.js#master"
   },
   "repository": {
